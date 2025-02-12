@@ -14,7 +14,7 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'web',
+        'guard' => 'api',
         'passwords' => 'users',
     ],
 
@@ -36,10 +36,17 @@ return [
     */
 
     'guards' => [
-        'web' => [
-            'driver' => 'session',
+        'api' => [
+            'driver' => 'jwt',
             'provider' => 'users',
+            'hash' => false,
         ],
+    ],
+
+    'api' => [
+        'driver' => 'jwt',  // Asegúrate de usar 'jwt' si estás usando JWT para la autenticación
+        'provider' => 'users',
+        'hash' => false,
     ],
 
     /*
