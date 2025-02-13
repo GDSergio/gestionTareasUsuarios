@@ -27,21 +27,17 @@ const TaskForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         try {
             if (task) {
                 await api.put(`/tasks/${task.id}`, { title, description, status });
             } else {
                 await api.post('/tasks', { title, description, status });
             }
-
             navigate('/tasks'); // Redirige a la lista de tareas después de guardar
         } catch (error) {
-        //     if (err.response && err.response.data.errors) {
-        //         setValidationErrors(err.response.data.errors);
-        //       } else {
-        //         setError('Hubo un error al registrar el usuario.');
-        //       }
+            // Ejemplo de manejo de error
+            alert('Hubo un error al guardar la tarea.');
+            console.error(error);
         }
     };
 
