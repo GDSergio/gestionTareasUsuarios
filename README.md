@@ -17,12 +17,12 @@ Este proyecto es una aplicación para la gestión de tareas y usuarios. El backe
 ## Configuración del Backend
 Para configurar el backend de Laravel, sigue estos pasos:
 
-1. **Instalar Laravel:**
+1. **Clonar Repositorio**
 
-Primero, crea el proyecto de Laravel utilizando Composer:
+Primero, accede a tu carpeta donde desea clonar el proyecto:
 
 ```bash
-composer create-project laravel/laravel gestionTareasUsuarios
+git clone 
 ```
 
 Accede a la carpeta del proyecto:
