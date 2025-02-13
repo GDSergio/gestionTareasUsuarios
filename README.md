@@ -22,7 +22,7 @@ Para configurar el backend de Laravel, sigue estos pasos:
 Primero, accede a tu carpeta donde desea clonar el proyecto:
 
 ```bash
-git clone 
+git clone https://github.com/GDSergio/gestionTareasUsuarios.git
 ```
 
 Accede a la carpeta del proyecto:
@@ -31,12 +31,16 @@ Accede a la carpeta del proyecto:
 cd gestionTareasUsuarios
 ```
 
-2. **Instalar la librería JWT para autenticación:**
+2. **Instalar el vendor al Backend:**
 
-Ejecuta el siguiente comando para instalar la librería JWT:
+Ejecuta el siguiente comando para acceder a la carpeta Backend:
 
 ```bash
-composer require tymon/jwt-auth
+cd Backend
+```
+luego de acceder a la carpeta Backend ejecutar para instalar las librerias 
+```bash
+composer install
 ```
 
 3. **Publicar los archivos de configuración de JWT:**
@@ -45,7 +49,7 @@ Publica los archivos de configuración de JWT para Laravel:
 ```bash
 php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
 ```
-3. **Generar la clave secreta de JWT:**
+4. **Generar la clave secreta de JWT:**
 
 Genera una clave secreta para JWT:
 ```bash
@@ -54,7 +58,7 @@ php artisan jwt:secret
 Esto creará una clave secreta única y la almacenará en el archivo .env.
 
 
-3. **Migrar la base de datos:**
+5. **Migrar la base de datos:**
 
 Ejecuta las migraciones para crear las tablas necesarias:
 
@@ -78,14 +82,7 @@ php artisan db:seed --class=UsersSeeder
 php artisan db:seed --class=TasksSeeder
 ```
 
-7. **Crear los controladores:**
-Crea los controladores para manejar la autenticación y las tareas:
- ```bash
-php artisan make:controller AuthController
-php artisan make:controller TaskController
-```
-
-8. **Iniciar el servidor de Laravel:**
+7.  **Iniciar el servidor de Laravel:**
 
 Para iniciar el servidor, ejecuta el siguiente comando:
 ```bash
@@ -99,15 +96,10 @@ El backend estará corriendo en http://localhost:8000.
 Para configurar el frontend con React, sigue estos pasos:
 
 
-1. **Crear el proyecto con Vite:**
+1. **Iniciar Frontend:**
 
-
-Primero, crea el proyecto de React utilizando Vite:
-
-```bash
-npx create-vite@latest frontend --template react
-```
-
+- nota no es necesario descargar nuevamente el proyecto ya que se encuentra el backend y el frontend dentro del mismo repositorio
+  
 Accede a la carpeta del frontend:
 ```bash
 cd frontend
@@ -143,6 +135,17 @@ npm run dev
 ```
 
 El frontend estará corriendo en http://localhost:5173.
+Aca ya estaras iniciando el proyecto para poder correr en funcion
+
+el usuario administrador y el usuario guest para acceder son los siguientes
+
+Admin: 
+correo: admin@admin.com
+Password: admin123
+
+Guest
+correo: guest@guest.com
+Password: guest123
 
 ---
 
