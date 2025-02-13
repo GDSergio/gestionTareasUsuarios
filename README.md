@@ -140,30 +140,33 @@ Aca ya estaras iniciando el proyecto para poder correr en funcion
 el usuario administrador y el usuario guest para acceder son los siguientes
 
 Admin: 
-correo: admin@admin.com
-Password: admin123
+- correo: admin@admin.com
+- Password: admin123
 
 Guest
-correo: guest@guest.com
-Password: guest123
+- correo: guest@guest.com
+- Password: guest123
 
 ---
 
-## Endpoints de la API
+## Endpoints de la API CON POSTMAN
 Aquí están los principales endpoints de la API del backend:
 
-- POST /api/login: Autenticación de usuarios con JWT.
 - POST /api/register: Registro de nuevos usuarios.
+- POST /api/login: Autenticación de usuarios con JWT.
 - GET /api/profile: Obtener información del perfil del usuario autenticado.
-- GET /api/tasks: Obtener todas las tareas.
 - POST /api/tasks: Crear una nueva tarea.
+- GET /api/tasks: Obtener todas las tareas.
 - PUT /api/tasks/{id}: Actualizar una tarea existente.
 - DELETE /api/tasks/{id}: Eliminar una tarea.
 - POST /api/logout: Cerrar sesión del usuario (invalidar el token - JWT).
 
+Los Endpoints deben de ejecutarse en este orden que se encuentra en el listado anterior.
+Una vez ejecutado el register y el login este Endpoint en especifico ```/api/login``` me va a retornar un token, el cual es la autenticacion para cada uno de los siguientes Endpoints. Este token se coloca de la siguiente manera: Vamos al Header ```Key: Authorization ``` y ```Value: Bearer {{el token}}```
+
 --- 
 ## Documentación de la API
-La documentación de los endpoints está disponible en la carpeta ```public/docs```, donde se encuentra el archivo Postman Collection con todos los endpoints configurados para que puedas importarlos directamente a Postman y probar la API.
+La documentación de los endpoints está disponible en la carpeta ```Backend/public/docs/Collection.json```, donde se encuentra el archivo Postman Collection con todos los endpoints configurados para que puedas importarlos directamente a Postman y probar la API.
 
 ## Estructura del Proyecto
 #### Backend
