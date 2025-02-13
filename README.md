@@ -176,6 +176,6 @@ La documentación de los endpoints está disponible en la carpeta ```Backend/pub
 - database/migrations/: Archivos de migraciones para crear las tablas.
 - database/seeders/: Archivos para insertar datos de prueba en la base de datos.
 #### Frontend
-- rc/App.jsx: Componente principal donde se consume la API de tareas.
+- src/App.jsx: Componente principal donde se consume la API de tareas.
 - src/components/: Carpeta con los componentes de React (por ejemplo, formulario de tareas, vista de tareas, etc.).
 - src/services/api.js: Archivo donde se configuran las peticiones HTTP con axios.
