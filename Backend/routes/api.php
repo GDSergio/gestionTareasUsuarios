@@ -27,7 +27,7 @@ Route::post('register', [AuthController::class, 'register']); // ruta del endPoi
 Route::post('login', [AuthController::class, 'login']);// ruta del endpoint para validar si un usuario existe
 
 Route::middleware('auth:api')->group(function () {
-    Route::post('logout', [AuthController::class, 'logout']);
+    // Route::post('logout', [AuthController::class, 'logout']);
     Route::get('profile', [AuthController::class, 'profile']);
 
     Route::get('tasks', [TaskController::class, 'index']);
@@ -35,4 +35,6 @@ Route::middleware('auth:api')->group(function () {
     Route::put('tasks/{task}', [TaskController::class, 'update']);
     Route::delete('tasks/{task}', [TaskController::class, 'destroy']);
 });
+
+Route::middleware('auth:api')->post('/logout', [AuthController::class, 'logout']);
 
